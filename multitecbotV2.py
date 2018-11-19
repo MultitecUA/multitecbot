@@ -11,7 +11,7 @@ from telegram.ext import CommandHandler
 
 TOKEN = '755869851:AAFBJEPnW5kyV8xmK-We-Pj7fGRam4XRP8o' # Asignamos a la variable TOKEN el hash de nuestro bot para facilitar su utilización más adelante.
 
-AYUDA = 'Hola! soy el bot oficial de Multitec, me encargo de gestionar los grupos y el canal de la asociación, puedes utilizar los siguientes comandos : \n\n/comandos - Lista de comandos. \n/chiste - Que el bot te cuente un chiste \n/eventos - Informacion sobre Eventos \n/pagina web - Nuestra web \n/inscripcion - Link del formulario de inscripción' # Mensaje de ayuda y bienvenida.
+AYUDA = 'Hola! soy el bot oficial de Multitec, me encargo de gestionar los grupos y el canal de la asociación, puedes utilizar los siguientes comandos : \n\n/comandos - Lista de comandos. \n/chiste - Que el bot te cuente un chiste \n/eventos - Informacion sobre Eventos \n/pagina web - Nuestra web \n/inscripcion - Link del formulario de inscripción\n/redes_sociales - Enlaces a las redes sociales de la Comunidad' # Mensaje de ayuda y bienvenida.
 
 #COMANDOS
 COMANDOS = '/comandos - lista de comandos. \n/chiste - Que el bot te cuente un chiste \n/eventos - Informacion sobre Eventos \n/pagina web - Nuestra web \n/inscripcion - Link del formulario de inscripción\n/redes_sociales - Enlaces a las redes sociales de la Comunidad'
