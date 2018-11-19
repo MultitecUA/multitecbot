@@ -114,6 +114,13 @@ def stickers(bot, update):
 start_handler = CommandHandler('stickers', stickers)
 dispatcher.add_handler(start_handler)
 
+#por si alguien pone un comando inexistente
+def unknown(bot, update):
+    bot.send_message(chat_id=update.message.chat_id, text="Lo siento, no entiendo ese comando")
+
+unknown_handler = MessageHandler(Filters.command, unknown)
+dispatcher.add_handler(unknown_handler)
+
 # Con esto el bot hará echo de todo lo que le escribamos por el chat.
 def echo(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text=update.message.text)
