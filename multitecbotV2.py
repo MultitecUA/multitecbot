@@ -2,7 +2,7 @@
 # MULTITECBOT creado por Esteban Escobar.
 # Basado en la API de creación de bots en python. Para más información consultar su repositorio en github (https://github.com/python-telegram-bot/python-telegram-bot). 
 
-import telegram # Importamos la librería.
+import telegram
 import logging
 import random
 from telegram.ext import Updater

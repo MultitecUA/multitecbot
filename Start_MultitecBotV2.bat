@@ -1,0 +1,1 @@
+python C:\Users\Notebook\Desktop\multitecbot-master\multitecbotV2.py
