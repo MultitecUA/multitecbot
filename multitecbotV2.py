@@ -79,7 +79,7 @@ dispatcher.add_handler(start_handler)
 
 #Comando redes sociales
 def redes_sociales(bot, update):
-    bot.send_message(chat_id = update.message.chat_id, text = EVENTOS)
+    bot.send_message(chat_id = update.message.chat_id, text = REDES_SOCIALES)
 
 start_handler = CommandHandler('redes_sociales', redes_sociales)
 dispatcher.add_handler(start_handler)
