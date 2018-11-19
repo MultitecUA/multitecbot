@@ -14,7 +14,7 @@ TOKEN = '755869851:AAFBJEPnW5kyV8xmK-We-Pj7fGRam4XRP8o' # Asignamos a la variabl
 AYUDA = 'Hola! soy el bot oficial de Multitec, me encargo de gestionar los grupos y el canal de la asociación, puedes utilizar los siguientes comandos : \n\n/comandos - Lista de comandos. \n/chiste - Que el bot te cuente un chiste \n/eventos - Informacion sobre Eventos \n/pagina web - Nuestra web \n/inscripcion - Link del formulario de inscripción' # Mensaje de ayuda y bienvenida.
 
 #COMANDOS
-COMANDOS = '/comandos - ista de comandos. \n/chiste - Que el bot te cuente un chiste \n/eventos - Informacion sobre Eventos \n/pagina web - Nuestra web \n/inscripcion - Link del formulario de inscripción'
+COMANDOS = '/comandos - lista de comandos. \n/chiste - Que el bot te cuente un chiste \n/eventos - Informacion sobre Eventos \n/pagina web - Nuestra web \n/inscripcion - Link del formulario de inscripción\n/redes_sociales - Enlaces a las redes sociales de la Comunidad'
 
 #EVENTOS
 EVENTOS = 'CALENDARIO DE EVENTOS\n\n📆 1 de diciembre hay Ludum Dare y ya se ha abierto el plazo para sugerir temas:https://ldjam.com/events/ludum-dare/43/theme\nLudum Dare is one of the worlds largest and longest running Game Jam events. Every 4 months, we challenge creators to make a game from scratch in a weekend\n\nTORREVIEJA\n-Nueva edición Hackea Tu Destino! https://www.eventbrite.es/e/entradas-hackea-tu-destino-2018-52450812793\nCentrada en la innovación en turismo y el desarrollo de aplicaciones y tecnologías que resuelvan problemas actuales y aporten nuevos puntos de vista relacionados con el ambito turístico.\n📆 ¿Cuándo? Del 24 de noviembre de 2018 a las 10:00h hasta el 25 de noviembre de 2018 a las 18:00h.'
