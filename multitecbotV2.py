@@ -7,6 +7,7 @@ import logging
 import random
 from telegram.ext import Updater
 from telegram.ext import CommandHandler
+from telegram.ext import MessageHandler, Filters
 
 
 TOKEN = '755869851:AAFBJEPnW5kyV8xmK-We-Pj7fGRam4XRP8o' # Asignamos a la variable TOKEN el hash de nuestro bot para facilitar su utilización más adelante.
@@ -125,7 +126,7 @@ dispatcher.add_handler(unknown_handler)
 def echo(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text=update.message.text)
 
-from telegram.ext import MessageHandler, Filters
+
 echo_handler = MessageHandler(Filters.text, echo)
 dispatcher.add_handler(echo_handler)
 
