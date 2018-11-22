@@ -27,7 +27,7 @@ REDES_SOCIALES = 'Página de Facebook: https://bit.ly/2A4jADu\n Página de insta
 INSCRIPCION = 'https://docs.google.com/forms/d/18s-7T9IxWPlnRpncwwZjqm6utwLan9IkMOORfk2ytNs/viewform?edit_requested=true'
 
 #pagina
-PAGINA = 'Estamos resolviendo algunos problemas tecnicos en este momento...'
+PAGINA = 'Aquí tienes nuestra página web, pronto ofrecerá muchos más servicios: multitecua.ml'
 
 #stickers
 STICKERS = 'https://t.me/addstickers/multitecua'
