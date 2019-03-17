@@ -131,9 +131,7 @@ def echo(bot, update):
     trainer = ChatterBotCorpusTrainer(chatbot)
     # Train the chatbot based on the spanish corpus
     trainer.train("chatterbot.corpus.spanish")
-    trainer.train("chatterbot.corpus.spanish.greetings")
-    trainer.train("chatterbot.corpus.spanish.conversations")
-    trainer.train("chatterbot.corpus.spanish.trivia")
+    trainer.train("chatterbot.corpus.spanish.multitec")
 
     # Get a response to an input statement
     respuesta=chatbot.get_response(update.message.text)
