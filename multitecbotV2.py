@@ -8,6 +8,8 @@ import random
 from telegram.ext import Updater
 from telegram.ext import CommandHandler
 from telegram.ext import MessageHandler, Filters
+from chatterbot import ChatBot
+from chatterbot.trainers import ChatterBotCorpusTrainer
 
 
 TOKEN = '755869851:AAFBJEPnW5kyV8xmK-We-Pj7fGRam4XRP8o' # Asignamos a la variable TOKEN el hash de nuestro bot para facilitar su utilización más adelante.
@@ -21,7 +23,7 @@ COMANDOS = '/comandos - lista de comandos. \n/chiste - Que el bot te cuente un c
 EVENTOS = 'CALENDARIO DE EVENTOS\n\n📆 1 de diciembre hay Ludum Dare y ya se ha abierto el plazo para sugerir temas:https://ldjam.com/events/ludum-dare/43/theme\nLudum Dare is one of the worlds largest and longest running Game Jam events. Every 4 months, we challenge creators to make a game from scratch in a weekend\n\nTORREVIEJA\n-Nueva edición Hackea Tu Destino! https://www.eventbrite.es/e/entradas-hackea-tu-destino-2018-52450812793\nCentrada en la innovación en turismo y el desarrollo de aplicaciones y tecnologías que resuelvan problemas actuales y aporten nuevos puntos de vista relacionados con el ambito turístico.\n📆 ¿Cuándo? Del 24 de noviembre de 2018 a las 10:00h hasta el 25 de noviembre de 2018 a las 18:00h.'
 
 #EVENTOS
-REDES_SOCIALES = 'Página de Facebook: https://bit.ly/2A4jADu\n Página de instagram: https://www.instagram.com/multitecua'
+REDES_SOCIALES = '¡Síguenos en nuestras redes sociales!\nNuestra Web\nmultitecua.ml\nTwitter\n  twitter.com/multitecua\nLinkedIn\nlinkedin.com/company/multitecua\nInstagram\ninstagram.com/multitecua/\nFacebook\nfacebook.com/MultitecUA\nYouTube \nyoutube.com/channel/UComtzTLqL-jHvRhiQVrzPJg?sub_confirmation=1\nDiscord \n https://discord.gg/pcyuxX9'
 
 #inscripcion
 INSCRIPCION = 'https://docs.google.com/forms/d/18s-7T9IxWPlnRpncwwZjqm6utwLan9IkMOORfk2ytNs/viewform?edit_requested=true'
@@ -124,8 +126,19 @@ dispatcher.add_handler(unknown_handler)
 
 # Con esto el bot hará echo de todo lo que le escribamos por el chat.
 def echo(bot, update):
-    bot.send_message(chat_id=update.message.chat_id, text=update.message.text)
+    chatbot = ChatBot('Ron Obvious')
+    # Create a new trainer for the chatbot
+    trainer = ChatterBotCorpusTrainer(chatbot)
+    # Train the chatbot based on the spanish corpus
+    trainer.train("chatterbot.corpus.spanish")
+    trainer.train("chatterbot.corpus.spanish.greetings")
+    trainer.train("chatterbot.corpus.spanish.conversations")
+    trainer.train("chatterbot.corpus.spanish.trivia")
 
+    # Get a response to an input statement
+    respuesta=chatbot.get_response(update.message.text)
+    print(respuesta)
+    bot.send_message(chat_id=update.message.chat_id, text=respuesta.text)
 
 echo_handler = MessageHandler(Filters.text, echo)
 dispatcher.add_handler(echo_handler)
